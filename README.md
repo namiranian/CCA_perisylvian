@@ -17,8 +17,9 @@ bash
 project-root/
 │
 ├── README
+├── reg_out_age.py                    # code to regress out the age from structural and functional data in python
 ├── input_data/
-│   ├── subject_list.csv                   # list of the subjects enrolled in this study
+│   ├── subject_list.csv              # list of the subjects enrolled in this study
 │   ├── metrics/                  
 │   │   ├── morphologicalfeats.csv        # Structural metrics 
 │   │   ├── Falff.csv                     # Functional metric (fALFF)
