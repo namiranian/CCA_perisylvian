@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository contains code and data for a two-part analysis combining structural and functional brain metrics of perisylvian sub-regions (PSRs) using multivariate statistical methods. The two different types of functional metrics are as follows:
+This repository contains codes and data for two separate analyses combining structural and functional brain metrics of perisylvian sub-regions (PSRs) using multivariate statistical methods. The same structural metrics have been used in both analyses. The two different types of functional metrics are as follows:
 
 **1.	fractional amplitude of low-frequency fluctuations (fALFF)**
 
@@ -16,49 +16,26 @@ bash
 
 project-root/
 │
-├── indiv_features/
-│   └── regout/
+├── README
+├── input_data/
+│   ├── subject_list.csv                   # list of the subjects enrolled in this study
+│   ├── metrics/                  
+│   │   ├── morphologicalfeats.csv        # Structural metrics 
+│   │   ├── Falff.csv                     # Functional metric (fALFF)
+│   │   └── FC_XX_to_all.csv              # FC metrics (for PSRs 11 to 86)
+│   └── age_reg_out_metrics/
 │       ├── morphologicalfeats.csv        # Structural metrics (age-regressed-out)
 │       ├── Falff.csv                     # Functional metric (fALFF, age-regressed-out)
 │       └── FC_XX_to_all.csv              # FC metrics (for PSRs 11 to 86, age-regressed-out)
 │
 ├── FALFF/
 │   ├── main_FALFF_PSR.R                  # Main script for Experiment 1 (fALFF) in R
-│   ├── funcs_FALFF_PSR.R                 # Supporting functions in R
-│   ├── feature_selection/                # Results of feature selection step (SCCA)
-│   │   ├── permsinfo_com_1.csv                   # Results of selecting sparsity levels 
-│   │   ├── sigcomponents_permutation.csv         # Result of selecting significant components of SCCA 
-│   │   ├── allmain/                              # SCCA results on original data
-│   │   ├── allboot/                              # Results of bootstrapping test for significant components of SCCA
-│   │   └── allvisig/
-│   │       └── selected_features.csv                  # Aggregated weights for each metric using all significant components 
-│   └── CS-CF/
-│       ├── FC_XX/                         # Results of CS-CF feature extraction (CCA)
-│           ├── maincorr.csv                      # Canonical correlation coefficients on original data
-│           ├── cca_weights_struc.csv             # Structural canonical weights on original data
-│           ├── cca_weights_func.csv              # Functional canonical weights on original data
-│           └── (heatmaps, histograms, regression plots, etc.)
+│   └── funcs_FALFF_PSR.R                 # Supporting functions in R
 │
-├── FC/
-│   ├── main_FC.R                         # Main script for Experiment 2 (FC) in R
-│   ├── funcs_FC.R                        # Supporting functions in R
-│   ├── feature_selection/                # Results of feature selection step (SCCA)
-│   │   ├── permsinfo_seeds.csv                   # Results of selecting sparsity levels for all PSRs as seed
-│   │   ├── sigcomponents_permutation_*.csv       # Result of selecting significant components of SCCA for each PSR
-│   │   ├── main/                                 # SCCA results on original data
-│   │   ├── boot/                                 # Results of bootstrapping test for significant components of SCCA
-│   │   └── visig/
-│   │       ├── FC_XX/
-│   │           ├── rois_using_all_components.csv       # Selected regions/metrics
-│   │           └── weights_using_all_components.csv    # Aggregated weights for each metric
-│   └── CS-CF/
-│       ├── FC_XX/                           # Results of CS-CF feature extraction (CCA)
-│           ├── maincorr_XX.csv                  # Canonical correlation coefficients on original data
-│           ├── struc_weightsXX.csv              # Structural canonical weights on original data
-│           ├── func_weightsXX.csv               # Functional canonical weights on original data
-│           └── (heatmaps, histograms, regression plots, etc.)
-│
-└── README
+└── FC/
+    ├── main_FC.R                         # Main script for Experiment 2 (FC) in R
+    └── funcs_FC.R                        # Supporting functions in R
+
 ```
 
 ## How to Run the Code
