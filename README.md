@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository contains codes and data for two separate analyses combining structural and functional brain metrics of perisylvian sub-regions (PSRs) using multivariate statistical methods. The same structural metrics have been used in both analyses. The two different types of functional metrics are as follows:
+This repository contains codes for two separate analyses combining structural and functional brain metrics of perisylvian sub-regions (PSRs) using multivariate statistical methods. The same structural metrics have been used in both analyses. The two different types of functional metrics are as follows:
 
 **1.	fractional amplitude of low-frequency fluctuations (fALFF)**
 
